@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "capturing-and-parsing-packets",
+  "cleanUrls": true,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "capturing-and-parsing-packets",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Running Network Packet Sniffer Engine on port 3002'",
+    "build": "echo 'Packet Sniffer binaries ready'",
+    "start": "echo 'Starting Packet Sniffer Monitor'"
+  }
+}
