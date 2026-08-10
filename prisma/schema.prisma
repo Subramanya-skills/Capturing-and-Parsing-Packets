@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model CapturedPacket {
+  id        String   @id @default(cuid())
+  timestamp String
+  protocol  String   // "DNS" | "ARP" | "TCP" | "UDP" | "ICMP"
+  srcIp     String
+  dstIp     String
+  length    Int
+  info      String
+  hexDump   String
+  status    String   // "NORMAL" | "SUSPICIOUS" | "MALICIOUS"
+  createdAt DateTime @default(now())
+}
+
+model SecurityAlert {
+  id          String   @id @default(cuid())
+  alertType   String   // "ARP_SPOOFING" | "DNS_POISONING" | "SYN_FLOOD"
+  severity    String   // "HIGH" | "CRITICAL" | "WARNING"
+  details     String
+  triggeredAt DateTime @default(now())
+}

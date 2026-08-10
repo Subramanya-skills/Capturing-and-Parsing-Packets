@@ -3,8 +3,25 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "echo 'Running Network Packet Sniffer Engine on port 3002'",
-    "build": "echo 'Packet Sniffer binaries ready'",
-    "start": "echo 'Starting Packet Sniffer Monitor'"
+    "dev": "next dev -p 3002",
+    "build": "next build",
+    "start": "next start -p 3002"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.8.0",
+    "lucide-react": "^1.25.0",
+    "motion": "^12.42.2",
+    "next": "16.2.10",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "prisma": "^7.8.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
